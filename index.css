@@ -161,8 +161,7 @@ div.audio-player {
 	height: 12px;
 	top: 70px;
 	left: 140px;
-	background: transparent url(/img/mute-unmute.png) 0 0;
-}
+	}
 
 .mejs-controls .mejs-unmute button { background-position: 0 -12px; }
 
