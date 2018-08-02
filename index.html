@@ -3,9 +3,17 @@
 
 <head>
 	<title>Studio Debacle | Games Your Grandmother Wouldn't Play</title>
-	<link rel="stylesheet" type="text/css" href="index.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> 
+<!-- Audio Player CSS & Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/mediaelement-and-player.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="index.css" media="screen">
+	<style type="text/css">
+		.audio-player { margin: 0 auto;}
+	</style>
+
+<meta name="robots" content="noindex,follow" />
 </head>
 
 <body>
@@ -40,8 +48,28 @@
 	</header>
 
 	<span class="twitter-container">
-		<a class="twitter-timeline" data-height="400" data-theme="dark" href="https://twitter.com/StudioDebacle?ref_src=twsrc%5Etfw">Tweets by StudioDebacle</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<a class="twitter-timeline" data-height="400" data-theme="dark" href="https://twitter.com/StudioDebacle?ref_src=twsrc%5Etfw" data-chrome="nofooter noborders noscrollbar transparent">Tweets by StudioDebacle</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</span>
+
+<!-- Audio Player HTML -->
+	<div class="audio-player">
+		<h1>Scrapyard Boulevard - thewerebear</h1>
+		<img class="cover" src="img/cover.png" alt="">
+		<audio id="audio-player" src="media/elfJazzMeme.mp3" type="audio/mp3" controls="controls"></audio>
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			$('#audio-player').mediaelementplayer({
+				alwaysShowControls: true,
+				features: ['playpause','volume','progress'],
+				audioVolume: 'horizontal',
+				audioWidth: 333,
+				audioHeight: 120
+			});
+		});
+	</script>
+
 
 
 	<!--<div class="wrapper">
